@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>
+  Licensr 
+ </title>
+
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+ <!-- font awesome cdn link  -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+ <!-- custom css file link  -->
+ <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+ <!-- header section starts  -->
+
+ <header>
+  <div id="menu-bar" class="fas fa-bars"></div>
+
+  <a href="#home" class="logo"><span>Li</span>cenSr</a>
+
+  <nav class="navbar">
+   <a href="#home">home</a>
+   <a href="#book">authorize</a>
+   <a href="#mint">mint</a>
+   <a href="#transfer">transfer</a>
+  </nav>
+
+  <div class="icons">
+   <i class="fas fa-search" id="search-btn"></i>
+   <i class="fas fa-user" id="login-btn"></i>
+  </div>
+
+  <form action="" class="search-bar-container">
+   <input type="search" id="search-bar" placeholder="search here..." />
+   <label for="search-bar" class="fas fa-search"></label>
+  </form>
+ </header>
+
+ <!-- header section ends -->
+
+ <!-- login form container  -->
+
+ <div class="login-form-container">
+  <i class="fas fa-times" id="form-close"></i>
+
+  <form action="">
+   <h3>login</h3>
+   <input type="email" class="box" placeholder="Enter your email" />
+   <input type="password" class="box" placeholder="Enter your password" />
+   <input type="submit" value="login now" class="btn" />
+   <input type="checkbox" id="remember" />
+   <label for="remember">remember me</label>
+   <p>forget password? <a href="#">click here</a></p>
+   <p>don't have an account? <a href="#" id="signupBtn">register now</a></p>
+  </form>
+  <form action="" class="signUp" >
+   <h3>sign up</h3>
+   <input type="email" class="box" placeholder="Enter your email" />
+   <input type="password" class="box" placeholder="Enter your password" />
+   <input type="submit" value="login now" class="btn" />
+   <input type="checkbox" id="remember" />
+   <label for="remember">remember me</label>
+   <p>forget password? <a href="#">click here</a></p>
+   <p>don't have an account? <a href="#">register now</a></p>
+  </form>
+ </div>
+
+ <!-- home section starts  -->
+
+ <section class="home" id="home" >
+  <div class="content">
+   <h3>License Management on your finger tips...</h3>
+  </div>
+
+  <div class="video-container">
+   <!-- <img src="images/pexels-markus-spiske-177598.jpg" id="video-slider" loop autoplay muted></img> -->
+  <div class="video-container">
+   <video src="images/matrix-5539.mp4" id="video-slider" loop autoplay muted></video>
+  </div>
+ </section>
+
+<div style="text-align: center;">
+    <div 
+    class="g-recaptcha" 
+    data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+    style="display: inline-block;"
+    >
+</div>
+</div>
+<div style="text-align: center;">
+<button type="button" class="btn" onclick="toggleButton()" id="toggleButton">Submit</button>
+</div>
+ <section class="book" id="book" style="width: 80vw; margin-left: 10vw;">
+  <h1 class="heading">
+   <span>a</span>
+   <span>u</span>
+   <span>t</span>
+   <span>h</span>
+   <span>o</span>
+   <span>r</span>
+   <span>i</span>
+   <span>z</span>
+   <span>e</span>
+  </h1>
+
+  <div class="row">
+   <!-- <div class="image">
+    <img src="images/book-img.svg" alt="" />
+   </div> -->
+
+   <form action="">
+    <div class="inputBox">
+     <h3>Address ID : </h3>
+     <input type="text" placeholder="Address ID " id="authorizeAddressID"/>
+    </div>
+    <div class="inputBox">
+     <h3>License ID : </h3>
+     <input type="text" placeholder="License ID" id="authorizeLicenseID"/>
+    </div>
+    <button type="button" class="btn" onclick="authorizeLicense()" id="authBtn">Authorize</button>
+   </form>
+  </div>
+ </section>
+
+<!-- contact section starts  -->
+<section class="book" id="mint" style="width: 80vw; margin-left: 10vw;">
+ <h1 class="heading">
+  <span>m</span>
+  <span>i</span>
+  <span>n</span>
+  <span>t</span>
+ </h1>
+
+ <div class="row">
+  <!-- <div class="image">
+   <img src="images/book-img.svg" alt="" />
+  </div> -->
+  <form action="">
+   <button type="button" class="btn" onclick="mintLicense()" id="mintBtn">Mint</button>
+  </form>
+ </div>
+</section>
+
+<!-- book section ends -->
+
+<section class="book" id="transfer" style="width: 80vw; margin-left: 10vw;">
+ <h1 class="heading">
+  <span>t</span>
+  <span>r</span>
+  <span>a</span>
+  <span>n</span>
+  <span>s</span>
+  <span>f</span>
+  <span>e</span>
+  <span>r</span>
+ </h1>
+
+ <div class="row">
+  <!-- <div class="image">
+   <img src="images/book-img.svg" alt="" />
+  </div> -->
+
+  <form action="">
+   <div class="inputBox">
+    <h3>To : </h3>
+    <input type="text" placeholder=" To" id="transferTo"/>
+   </div>
+   <div class="inputBox">
+    <h3>From : </h3>
+    <input type="text" placeholder="From" id="transferFrom"/>
+   </div>
+   <div class="inputBox">
+    <h3>License ID : </h3>
+    <input type="text" placeholder="License ID" id="transferLicenseID"/>
+   </div>
+   <button type="button" class="btn" onclick="transferLicense()" id="transferBtn">Transfer</button>
+  </form>
+ </div>
+</section>
+
+<section class="book" id="buyRow" style="width: 80vw; margin-left: 10vw;">
+    <h1 class="heading">
+     <span>B</span>
+     <span>U</span>
+     <span>Y</span>
+    </h1>
+   
+    <div class="row" id="buyRow">
+     <!-- <div class="image">
+      <img src="images/book-img.svg" alt="" />
+     </div> -->
+   
+     <form action="">
+      <div class="inputBox">
+       <h3>License ID : </h3>
+       <input type="text" placeholder="License ID" id="buyLicenseID"/>
+      </div>
+      <button type="button" class="btn" onclick="buyLicense()" id="buyBtn">Buy</button>
+     </form>
+    </div>
+   </section>
+
+ <!-- brand section  -->
+ <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+ <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+ <script src="./node_modules/web3/dist/web3.min.js"></script>
+ <!-- custom js file link  -->
+ <script src="script.js"></script>
+</body>
+
+</html>
